@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Document version="1.0">
+    <GraphTransformationSystem ID="I1" directed="true"
+        name="OntologyMetamodel" parallel="true">
+        <TaggedValue Tag="AttrHandler" TagValue="Java Expr">
+            <TaggedValue Tag="Package" TagValue="java.lang"/>
+            <TaggedValue Tag="Package" TagValue="java.util"/>
+            <TaggedValue Tag="Package" TagValue="automata_impl"/>
+            <TaggedValue Tag="Package" TagValue="automata"/>
+            <TaggedValue Tag="Package" TagValue="automata.impl"/>
+            <TaggedValue Tag="Package" TagValue="org.eclipse.draw2d"/>
+            <TaggedValue Tag="Package" TagValue="org.eclipse.draw2d.geometry"/>
+            <TaggedValue Tag="Package" TagValue="org.eclipse.swt.graphics"/>
+        </TaggedValue>
+        <TaggedValue Tag="CSP" TagValue="true"/>
+        <TaggedValue Tag="injective" TagValue="true"/>
+        <TaggedValue Tag="dangling" TagValue="true"/>
+        <TaggedValue Tag="identification" TagValue="true"/>
+        <TaggedValue Tag="NACs" TagValue="true"/>
+        <TaggedValue Tag="PACs" TagValue="true"/>
+        <TaggedValue Tag="GACs" TagValue="true"/>
+        <TaggedValue Tag="breakAllLayer" TagValue="true"/>
+        <TaggedValue Tag="showGraphAfterStep" TagValue="true"/>
+        <TaggedValue Tag="waitAfterStep" TagValue="true"/>
+        <TaggedValue Tag="TypeGraphLevel" TagValue="ENABLED_MAX_MIN"/>
+        <Types>
+            <NodeType ID="I2" abstract="false" name="Entity%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <AttrType ID="I4" attrname="iri" typename="String" visible="true"/>
+                <AttrType ID="I5" attrname="name" typename="String" visible="true"/>
+            </NodeType>
+            <NodeType ID="I6" abstract="false" name="Class%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I2"/>
+            </NodeType>
+            <NodeType ID="I8" abstract="false" name="Property%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I2"/>
+                <AttrType ID="I10" attrname="functional"
+                    typename="boolean" visible="true"/>
+            </NodeType>
+            <NodeType ID="I11" abstract="false" name="ObjectProperty%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I8"/>
+                <AttrType ID="I13" attrname="inverseFunctional"
+                    typename="boolean" visible="true"/>
+                <AttrType ID="I14" attrname="transitive"
+                    typename="boolean" visible="true"/>
+                <AttrType ID="I15" attrname="symmetric"
+                    typename="boolean" visible="true"/>
+            </NodeType>
+            <NodeType ID="I16" abstract="false" name="DataProperty%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I8"/>
+            </NodeType>
+            <NodeType ID="I18" abstract="false" name="Restriction%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <AttrType ID="I20" attrname="description"
+                    typename="String" visible="true"/>
+            </NodeType>
+            <NodeType ID="I21" abstract="false" name="DataType%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I2"/>
+            </NodeType>
+            <NodeType ID="I23" abstract="false" name="Individual%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I2"/>
+            </NodeType>
+            <NodeType ID="I25" abstract="false" name="CardinalityRestriction%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I18"/>
+                <AttrType ID="I27" attrname="type" typename="String" visible="true"/>
+                <AttrType ID="I28" attrname="value" typename="int" visible="true"/>
+            </NodeType>
+            <NodeType ID="I29" abstract="false" name="ComplexClass%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I6"/>
+            </NodeType>
+            <NodeType ID="I31" abstract="false" name="UnionClass%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I29"/>
+            </NodeType>
+            <NodeType ID="I33" abstract="false" name="IntersectionClass%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I29"/>
+            </NodeType>
+            <NodeType ID="I35" abstract="false" name="ComplementClass%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I29"/>
+            </NodeType>
+            <NodeType ID="I37" abstract="false" name="EnumerateClass%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I6"/>
+            </NodeType>
+            <NodeType ID="I39" abstract="false" name="RestrictionValue%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I18"/>
+            </NodeType>
+            <NodeType ID="I41" abstract="false" name="SomeValuesFrom%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I39"/>
+            </NodeType>
+            <NodeType ID="I43" abstract="false" name="AllValuesFrom%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I39"/>
+            </NodeType>
+            <NodeType ID="I45" abstract="false" name="HasValue%:RECT:java.awt.Color[r=0,g=0,b=255]:[NODE]:">
+                <Parent pID="I39"/>
+            </NodeType>
+            <EdgeType ID="I47" abstract="false" name="domain%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I48" abstract="false" name="range%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I49" abstract="false" name="subClassOf%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I50" abstract="false" name="disjointWith%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I51" abstract="false" name="equivalentTo%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I52" abstract="false" name="complementOf%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I53" abstract="false" name="onProperty%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I54" abstract="false" name="onClass%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I55" abstract="false" name="hasRestriction%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I56" abstract="false" name="subProperty%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I57" abstract="false" name="memberOf%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I58" abstract="false" name="unionOf%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I59" abstract="false" name="intersectionOf%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I60" abstract="false" name="oneOf%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I61" abstract="false" name="dataPropertyAssertion%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:">
+                <AttrType ID="I63" attrname="value" typename="String" visible="true"/>
+            </EdgeType>
+            <EdgeType ID="I64" abstract="false" name="inverseTo%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I65" abstract="false" name="hasValue%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:"/>
+            <EdgeType ID="I66" abstract="false" name="objectPropertyAssertion%:SOLID_LINE:java.awt.Color[r=0,g=0,b=0]:[EDGE]:">
+                <AttrType ID="I68" attrname="iriObjProp"
+                    typename="String" visible="true"/>
+            </EdgeType>
+            <Graph ID="I69" kind="TG" name="OntologyMetamodel">
+                <Node ID="I70" type="I18">
+                    <NodeLayout X="573" Y="447"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I72" type="I6">
+                    <NodeLayout X="406" Y="314"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I74" type="I2">
+                    <NodeLayout X="493" Y="200"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I76" type="I8">
+                    <NodeLayout X="741" Y="532"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I78" type="I11">
+                    <NodeLayout X="710" Y="309"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I80" type="I16">
+                    <NodeLayout X="828" Y="457"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I82" type="I21">
+                    <NodeLayout X="887" Y="199"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I84" type="I23">
+                    <NodeLayout X="116" Y="163"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I86" type="I25">
+                    <NodeLayout X="602" Y="536"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I88" type="I35">
+                    <NodeLayout X="285" Y="474"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I90" type="I29">
+                    <NodeLayout X="209" Y="422"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I92" type="I31">
+                    <NodeLayout X="170" Y="535"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I94" type="I33">
+                    <NodeLayout X="243" Y="575"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I96" type="I37">
+                    <NodeLayout X="188" Y="327"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I98" type="I43">
+                    <NodeLayout X="459" Y="478"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I100" type="I41">
+                    <NodeLayout X="390" Y="542"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I102" type="I45">
+                    <NodeLayout X="462" Y="631"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Node ID="I104" type="I39">
+                    <NodeLayout X="462" Y="585"/>
+                    <additionalLayout age="0" force="10" frozen="false" zone="50"/>
+                </Node>
+                <Edge ID="I106" source="I72" target="I72" type="I50">
+                    <EdgeLayout bendX="368" bendY="289" loopH="20"
+                        loopW="20" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I107" source="I78" target="I78" type="I50">
+                    <EdgeLayout bendX="618" bendY="260" loopH="20"
+                        loopW="20" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I108" source="I80" target="I80" type="I50">
+                    <EdgeLayout bendX="771" bendY="432" loopH="20"
+                        loopW="20" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I109" source="I80" target="I80" type="I51">
+                    <EdgeLayout bendX="761" bendY="422" loopH="35"
+                        loopW="35" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I110" source="I78" target="I78" type="I51">
+                    <EdgeLayout bendX="608" bendY="250" loopH="35"
+                        loopW="35" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I111" source="I72" target="I72" type="I51">
+                    <EdgeLayout bendX="358" bendY="279" loopH="35"
+                        loopW="35" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I112" source="I72" target="I72" type="I49">
+                    <EdgeLayout bendX="340" bendY="258" loopH="62"
+                        loopW="59" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I113" source="I78" target="I72" type="I47">
+                    <EdgeLayout bendX="0" bendY="0"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="57" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I114" source="I80" target="I72" type="I47">
+                    <EdgeLayout bendX="0" bendY="0"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="65" textOffsetY="20"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I115" source="I78" target="I72" type="I48">
+                    <EdgeLayout bendX="677" bendY="351"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="-65" textOffsetY="-2"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I116" source="I80" target="I82" type="I48">
+                    <EdgeLayout bendX="0" bendY="0"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="-14" textOffsetY="-2"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I117" source="I70" target="I76" type="I53">
+                    <EdgeLayout bendX="0" bendY="0"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="-31" textOffsetY="-9"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I118" source="I72" target="I70" type="I55">
+                    <EdgeLayout bendX="510" bendY="405"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="-31" textOffsetY="-12"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I119" source="I78" target="I78" type="I56">
+                    <EdgeLayout bendX="596" bendY="238" loopH="50"
+                        loopW="50" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I120" source="I80" target="I80" type="I56">
+                    <EdgeLayout bendX="749" bendY="410" loopH="50"
+                        loopW="50" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I121" source="I84" target="I72" type="I57">
+                    <EdgeLayout bendX="0" bendY="0"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I122" source="I92" sourcemin="0" target="I72"
+                    targetmin="0" type="I58">
+                    <EdgeLayout bendX="134" bendY="396"
+                        sourceMultiplicityOffsetX="8"
+                        sourceMultiplicityOffsetY="36"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="-16" textOffsetY="-23"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I123" source="I94" target="I72" type="I59">
+                    <EdgeLayout bendX="350" bendY="477"
+                        sourceMultiplicityOffsetX="4"
+                        sourceMultiplicityOffsetY="18"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="-82" textOffsetY="38"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I124" source="I84" target="I84" type="I50">
+                    <EdgeLayout bendX="68" bendY="138" loopH="20"
+                        loopW="20" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I125" source="I84" target="I84" type="I51">
+                    <EdgeLayout bendX="58" bendY="128" loopH="35"
+                        loopW="35" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I126" source="I96" target="I84" type="I60">
+                    <EdgeLayout bendX="0" bendY="0"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="4" textOffsetY="-8"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I127" source="I88" target="I72" type="I52">
+                    <EdgeLayout bendX="0" bendY="0"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="-70" textOffsetY="7"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I128" source="I84" target="I80" type="I61">
+                    <EdgeLayout bendX="835" bendY="159"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="-77" textOffsetY="-25"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I130" source="I78" target="I78" type="I64">
+                    <EdgeLayout bendX="585" bendY="227" loopH="65"
+                        loopW="65" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="0" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I131" source="I100" target="I72" type="I54">
+                    <EdgeLayout bendX="0" bendY="0"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="-21" textOffsetY="24"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I132" source="I98" target="I72" type="I54">
+                    <EdgeLayout bendX="0" bendY="0"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="-12" textOffsetY="27"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I133" source="I102" target="I84" type="I65">
+                    <EdgeLayout bendX="119" bendY="631"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="6"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="15" textOffsetY="-17"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I134" source="I84" target="I84" type="I66">
+                    <EdgeLayout bendX="25" bendY="89" loopH="87"
+                        loopW="79" sourceMultiplicityOffsetX="5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="4" textOffsetY="-20"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+                <Edge ID="I136" source="I104" target="I82" type="I65">
+                    <EdgeLayout bendX="881" bendY="581"
+                        sourceMultiplicityOffsetX="-5"
+                        sourceMultiplicityOffsetY="16"
+                        targetMultiplicityOffsetX="-5"
+                        targetMultiplicityOffsetY="8" textOffsetX="-59" textOffsetY="-22"/>
+                    <additionalLayout aktlength="200" force="10" preflength="200"/>
+                </Edge>
+            </Graph>
+        </Types>
+        <Graph ID="I137" kind="HOST" name="Ontology"/>
+    </GraphTransformationSystem>
+</Document>

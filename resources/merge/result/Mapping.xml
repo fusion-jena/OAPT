@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingOntology>
+  <CommonTerms>
+    <term value="Person" type="Class" />
+    <term value="Review" type="Class" />
+    <term value="Reviewer" type="Class" />
+    <term value="Conference" type="Class" />
+    <term value="Paper" type="Class" />
+  </CommonTerms>
+  <EquivalentTerms>
+    <term value="ProgramCommitteeMember" type="Class" equivalent="Program_committee" />
+    <term value="ProgramCommitteeChair" type="Class" equivalent="Program_committee" />
+    <term value="hasAuthor" type="ObjectProperty" equivalent="has_authors" />
+  </EquivalentTerms>
+  <SynonymTerms>
+    <term value="Administrator" type="Class" synonym="Person" />
+    <term value="Chairman" type="Class" synonym="Chair" />
+    <term value="Author" type="Class" synonym="Person" />
+    <term value="User" type="Class" synonym="Person" />
+  </SynonymTerms>
+  <CommonTerms>
+    <term value="Administrator" type="Class" />
+    <term value="Person" type="Class" />
+    <term value="Conference" type="Class" />
+    <term value="Author" type="Class" />
+    <term value="Paper" type="Class" />
+    <term value="writtenBy" type="ObjectProperty" />
+  </CommonTerms>
+  <EquivalentTerms />
+  <SynonymTerms>
+    <term value="Chairman" type="Class" synonym="Person" />
+    <term value="Rejection" type="Class" synonym="Event" />
+    <term value="Co-author" type="Class" synonym="Author" />
+    <term value="User" type="Class" synonym="Scholar" />
+  </SynonymTerms>
+</MappingOntology>
+

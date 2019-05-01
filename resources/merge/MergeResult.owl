@@ -1,0 +1,1015 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <owl:Class rdf:about="http://cmt#ConferenceMember">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://cmt#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Contribution">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Event"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Organization"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#City"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Paper">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://cmt#Document"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Review"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Trip">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Social_event"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Banquet"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Reception"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Reviewer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://cmt#User"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#AuthorNotReviewer"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#ExternalReviewer"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://cmt#ConferenceMember"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#ProgramCommitteeChair">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://conference#Program_committee"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Short_paper">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Poster"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Paper"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://confOf#Contribution"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#ExternalReviewer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://cmt#Person"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="http://cmt#Reviewer"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Workshop">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Conference"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Tutorial"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Working_event"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Camera_Ready_event">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Reviewing_event"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Registration_of_participants_event"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Reviewing_results_event"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Submission_event"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Administrative_event"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Administrator">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Decision">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Document"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Preference"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#ProgramCommittee"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Bid"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Conference"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#ProgramCommittee">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Conference"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Preference"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://cmt#Decision"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Bid"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Document"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#AuthorNotReviewer">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://conference#Program_committee"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://cmt#Reviewer"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://cmt#Author"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Author">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Member">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Participant"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Social_event">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Event"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Working_event"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Administrative_event"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Student">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Participant"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Preference">
+    <owl:disjointWith rdf:resource="http://cmt#ProgramCommittee"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://cmt#Decision"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Document"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Conference"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Bid"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Person">
+    <owl:disjointWith rdf:resource="http://cmt#Preference"/>
+    <owl:disjointWith rdf:resource="http://cmt#ProgramCommittee"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Bid"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Conference"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://cmt#Decision"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Document"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Meta-Reviewer">
+    <rdfs:subClassOf rdf:resource="http://cmt#Reviewer"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Assistant">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Acceptance">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Rejection"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://cmt#Decision"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Volunteer">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Paper">
+    <owl:disjointWith rdf:resource="http://confOf#Short_paper"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Poster"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://confOf#Contribution"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Member_PC">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#PaperFullVersion">
+    <rdfs:subClassOf rdf:resource="http://cmt#Paper"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Co-author">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://cmt#Author"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#PaperAbstract">
+    <rdfs:subClassOf rdf:resource="http://cmt#Paper"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Scholar">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Person"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Administrator">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://cmt#User"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Regular">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Participant"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Company">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#University"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Organization"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Registration_of_participants_event">
+    <owl:disjointWith rdf:resource="http://confOf#Camera_Ready_event"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Reviewing_results_event"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Submission_event"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Reviewing_event"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://confOf#Administrative_event"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Event">
+    <owl:disjointWith rdf:resource="http://confOf#Contribution"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#City"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Organization"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Person"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Country"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Person">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#City"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://confOf#Contribution"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Country"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://confOf#Event"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Organization"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Administrative_event">
+    <rdfs:subClassOf rdf:resource="http://confOf#Event"/>
+    <owl:disjointWith rdf:resource="http://confOf#Social_event"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Working_event"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Reception">
+    <rdfs:subClassOf rdf:resource="http://confOf#Social_event"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Banquet"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://confOf#Trip"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Reviewing_event">
+    <owl:disjointWith rdf:resource="http://confOf#Camera_Ready_event"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Reviewing_results_event"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://confOf#Registration_of_participants_event"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Submission_event"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://confOf#Administrative_event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#SubjectArea"/>
+  <owl:Class rdf:about="http://confOf#Chair_PC">
+    <rdfs:subClassOf rdf:resource="http://confOf#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Document">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Bid"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://cmt#Decision"/>
+    <owl:disjointWith rdf:resource="http://cmt#ProgramCommittee"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Conference"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://cmt#Person"/>
+    <owl:disjointWith rdf:resource="http://cmt#Preference"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Organization">
+    <owl:disjointWith rdf:resource="http://confOf#Event"/>
+    <owl:disjointWith rdf:resource="http://confOf#Person"/>
+    <owl:disjointWith rdf:resource="http://confOf#Contribution"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Topic"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#City"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Country"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://conference#Program_committee">
+    <owl:disjointWith rdf:resource="http://cmt#AuthorNotReviewer"/>
+    <rdfs:subClassOf rdf:resource="http://cmt#ConferenceMember"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Reviewing_results_event">
+    <owl:disjointWith rdf:resource="http://confOf#Reviewing_event"/>
+    <owl:disjointWith rdf:resource="http://confOf#Registration_of_participants_event"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Submission_event"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://confOf#Camera_Ready_event"/>
+    <rdfs:subClassOf rdf:resource="http://confOf#Administrative_event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Banquet">
+    <rdfs:subClassOf rdf:resource="http://confOf#Social_event"/>
+    <owl:disjointWith rdf:resource="http://confOf#Trip"/>
+    <owl:disjointWith rdf:resource="http://confOf#Reception"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Science_Worker">
+    <rdfs:subClassOf rdf:resource="http://confOf#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#User">
+    <rdfs:subClassOf rdf:resource="http://cmt#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Conference">
+    <owl:disjointWith rdf:resource="http://cmt#Document"/>
+    <owl:disjointWith rdf:resource="http://cmt#ProgramCommittee"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#Bid"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://cmt#Person"/>
+    <owl:disjointWith rdf:resource="http://cmt#Decision"/>
+    <owl:disjointWith rdf:resource="http://cmt#Preference"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Participant">
+    <rdfs:subClassOf rdf:resource="http://confOf#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Rejection">
+    <rdfs:subClassOf rdf:resource="http://cmt#Decision"/>
+    <owl:disjointWith rdf:resource="http://cmt#Acceptance"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Author">
+    <rdfs:subClassOf rdf:resource="http://cmt#User"/>
+    <rdfs:subClassOf rdf:resource="http://cmt#ConferenceMember"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Working_event">
+    <rdfs:subClassOf rdf:resource="http://confOf#Event"/>
+    <owl:disjointWith rdf:resource="http://confOf#Administrative_event"/>
+    <owl:disjointWith rdf:resource="http://confOf#Social_event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Submission_event">
+    <owl:disjointWith rdf:resource="http://confOf#Registration_of_participants_event"/>
+    <owl:disjointWith rdf:resource="http://confOf#Camera_Ready_event"/>
+    <owl:disjointWith rdf:resource="http://confOf#Reviewing_event"/>
+    <owl:disjointWith rdf:resource="http://confOf#Reviewing_results_event"/>
+    <rdfs:subClassOf rdf:resource="http://confOf#Administrative_event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Bid">
+    <owl:disjointWith rdf:resource="http://cmt#Document"/>
+    <owl:disjointWith rdf:resource="http://cmt#Preference"/>
+    <owl:disjointWith rdf:resource="http://cmt#ProgramCommittee"/>
+    <owl:disjointWith rdf:resource="http://cmt#Conference"/>
+    <owl:disjointWith rdf:resource="http://cmt#Decision"/>
+    <owl:disjointWith rdf:resource="http://cmt#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Country">
+    <owl:disjointWith rdf:resource="http://confOf#Event"/>
+    <owl:disjointWith rdf:resource="http://confOf#Organization"/>
+    <owl:disjointWith rdf:resource="http://confOf#Person"/>
+    <owl:disjointWith rdf:resource="http://confOf#Contribution"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Topic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Meta-Review">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://cmt#Review"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#City">
+    <owl:disjointWith rdf:resource="http://confOf#Contribution"/>
+    <owl:disjointWith rdf:resource="http://confOf#Person"/>
+    <owl:disjointWith rdf:resource="http://confOf#Organization"/>
+    <owl:disjointWith rdf:resource="http://confOf#Event"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Topic"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Tutorial">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://confOf#Conference"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="http://confOf#Workshop"/>
+    <rdfs:subClassOf rdf:resource="http://confOf#Working_event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Poster">
+    <owl:disjointWith rdf:resource="http://confOf#Paper"/>
+    <owl:disjointWith rdf:resource="http://confOf#Short_paper"/>
+    <rdfs:subClassOf rdf:resource="http://confOf#Contribution"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Conference">
+    <owl:disjointWith rdf:resource="http://confOf#Tutorial"/>
+    <owl:disjointWith rdf:resource="http://confOf#Workshop"/>
+    <rdfs:subClassOf rdf:resource="http://confOf#Working_event"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Chairman">
+    <rdfs:subClassOf rdf:resource="http://cmt#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#University">
+    <owl:disjointWith rdf:resource="http://confOf#Company"/>
+    <rdfs:subClassOf rdf:resource="http://confOf#Organization"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#Review">
+    <owl:disjointWith rdf:resource="http://cmt#Paper"/>
+    <rdfs:subClassOf rdf:resource="http://cmt#Document"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#ConferenceChair">
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://cmt#AssociatedChair"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://cmt#ConferenceMember"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://confOf#Topic">
+    <owl:disjointWith rdf:resource="http://confOf#Country"/>
+    <owl:disjointWith rdf:resource="http://confOf#Contribution"/>
+    <owl:disjointWith rdf:resource="http://confOf#Organization"/>
+    <owl:disjointWith rdf:resource="http://confOf#City"/>
+    <owl:disjointWith rdf:resource="http://confOf#Event"/>
+    <owl:disjointWith rdf:resource="http://confOf#Person"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://cmt#AssociatedChair">
+    <owl:disjointWith rdf:resource="http://cmt#ConferenceChair"/>
+    <rdfs:subClassOf rdf:resource="http://cmt#ConferenceMember"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://cmt#paperAssignmentFinalizedBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#finalizePaperAssignment"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Administrator"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#markConflictOfInterest">
+    <rdfs:range rdf:resource="http://cmt#Paper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#endReview">
+    <rdfs:range rdf:resource="http://cmt#Review"/>
+    <rdfs:domain rdf:resource="http://cmt#ProgramCommitteeChair"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#paperAssignmentToolsRunBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#runPaperAssignmentTools"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Administrator"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://confOf#employedBy">
+    <rdfs:range rdf:resource="http://confOf#Organization"/>
+    <rdfs:domain rdf:resource="http://confOf#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#enterReviewCriteria">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#reviewCriteriaEnteredBy"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Conference"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://confOf#dealsWith">
+    <rdfs:range rdf:resource="http://confOf#Topic"/>
+    <rdfs:domain rdf:resource="http://confOf#Contribution"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#virtualMeetingEnabledBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#enableVirtualMeeting"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Administrator"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#hasProgramCommitteeMember">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#memberOfProgramCommittee"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://conference#Program_committee"/>
+    <rdfs:domain rdf:resource="http://cmt#ProgramCommittee"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://confOf#studyAt">
+    <rdfs:range rdf:resource="http://confOf#University"/>
+    <rdfs:domain rdf:resource="http://confOf#Scholar"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#assignedByAdministrator">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#assignReviewer"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Administrator"/>
+    <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#readByReviewer">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#readPaper"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#enterConferenceDetails">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#detailsEnteredBy"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Conference"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://confOf#hasAdministrativeEvent">
+    <rdfs:range rdf:resource="http://confOf#Administrative_event"/>
+    <rdfs:domain rdf:resource="http://confOf#Working_event"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#assignReviewer">
+    <owl:inverseOf rdf:resource="http://cmt#assignedByAdministrator"/>
+    <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#assignedTo">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#hasBeenAssigned"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#hasConflictOfInterest">
+    <rdfs:range rdf:resource="http://cmt#Document"/>
+    <rdfs:domain rdf:resource="http://cmt#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://confOf#writtenBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://confOf#writes"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://confOf#Author"/>
+    <rdfs:domain rdf:resource="http://confOf#Contribution"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#co-writePaper">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#hasCo-author"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Paper"/>
+    <rdfs:domain rdf:resource="http://cmt#Co-author"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#reviewCriteriaEnteredBy">
+    <owl:inverseOf rdf:resource="http://cmt#enterReviewCriteria"/>
+    <rdfs:range rdf:resource="http://cmt#Administrator"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#memberOfProgramCommittee">
+    <owl:inverseOf rdf:resource="http://cmt#hasProgramCommitteeMember"/>
+    <rdfs:range rdf:resource="http://cmt#ProgramCommittee"/>
+    <rdfs:domain rdf:resource="http://conference#Program_committee"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#submitPaper">
+    <rdfs:range rdf:resource="http://cmt#Paper"/>
+    <rdfs:domain rdf:resource="http://cmt#Author"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#hasBeenAssigned">
+    <owl:inverseOf rdf:resource="http://cmt#assignedTo"/>
+    <rdfs:range rdf:resource="http://cmt#Paper"/>
+    <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#hardcopyMailingManifestsPrintedBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#printHardcopyMailingManifests"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Administrator"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://confOf#writes">
+    <owl:inverseOf rdf:resource="http://confOf#writtenBy"/>
+    <rdfs:range rdf:resource="http://confOf#Contribution"/>
+    <rdfs:domain rdf:resource="http://confOf#Author"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#detailsEnteredBy">
+    <owl:inverseOf rdf:resource="http://cmt#enterConferenceDetails"/>
+    <rdfs:range rdf:resource="http://cmt#Administrator"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#setMaxPapers">
+    <rdfs:range rdf:resource="http://conference#Program_committee"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://confOf#expertOn">
+    <rdfs:range rdf:resource="http://confOf#Topic"/>
+    <rdfs:domain rdf:resource="http://confOf#Member_PC"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#hasConferenceMember">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#memberOfConference"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#ConferenceMember"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#memberOfConference">
+    <owl:inverseOf rdf:resource="http://cmt#hasConferenceMember"/>
+    <rdfs:range rdf:resource="http://cmt#Conference"/>
+    <rdfs:domain rdf:resource="http://cmt#ConferenceMember"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://confOf#hasCity">
+    <rdfs:range rdf:resource="http://confOf#City"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#readPaper">
+    <owl:inverseOf rdf:resource="http://cmt#readByReviewer"/>
+    <rdfs:range rdf:resource="http://cmt#Paper"/>
+    <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#reviewerBiddingStartedBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://cmt#startReviewerBidding"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Administrator"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#startReviewerBidding">
+    <owl:inverseOf rdf:resource="http://cmt#reviewerBiddingStartedBy"/>
+    <rdfs:range rdf:resource="http://cmt#Conference"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#hasSubjectArea">
+    <rdfs:range rdf:resource="http://cmt#SubjectArea"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#finalizePaperAssignment">
+    <owl:inverseOf rdf:resource="http://cmt#paperAssignmentFinalizedBy"/>
+    <rdfs:range rdf:resource="http://cmt#Conference"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#printHardcopyMailingManifests">
+    <owl:inverseOf rdf:resource="http://cmt#hardcopyMailingManifestsPrintedBy"/>
+    <rdfs:range rdf:resource="http://cmt#Conference"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#enableVirtualMeeting">
+    <owl:inverseOf rdf:resource="http://cmt#virtualMeetingEnabledBy"/>
+    <rdfs:range rdf:resource="http://cmt#Conference"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://confOf#reviewes">
+    <rdfs:range rdf:resource="http://confOf#Contribution"/>
+    <rdfs:domain rdf:resource="http://confOf#Member_PC"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://confOf#hasTopic">
+    <rdfs:range rdf:resource="http://confOf#Topic"/>
+    <rdfs:domain rdf:resource="http://confOf#Working_event"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#hasCo-author">
+    <owl:inverseOf rdf:resource="http://cmt#co-writePaper"/>
+    <rdfs:range rdf:resource="http://cmt#Co-author"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://cmt#runPaperAssignmentTools">
+    <owl:inverseOf rdf:resource="http://cmt#paperAssignmentToolsRunBy"/>
+    <rdfs:range rdf:resource="http://cmt#Conference"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://confOf#contactEmail">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Contribution"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://confOf#hasPostalCode">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://confOf#hasPhone">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://cmt#email">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://cmt#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://confOf#hasEmail">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://confOf#hasKeyword">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Contribution"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://confOf#minChoice">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://cmt#date">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://confOf#location">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://confOf#remark">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Contribution"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://confOf#hasFax">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://confOf#hasHomePage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://confOf#hasStreet">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:TransitiveProperty rdf:about="http://confOf#follows">
+    <rdfs:range rdf:resource="http://confOf#Administrative_event"/>
+    <rdfs:domain rdf:resource="http://confOf#Administrative_event"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:TransitiveProperty>
+  <owl:SymmetricProperty rdf:about="http://confOf#parallel_with">
+    <owl:inverseOf rdf:resource="http://confOf#parallel_with"/>
+    <rdfs:range rdf:resource="http://confOf#Administrative_event"/>
+    <rdfs:domain rdf:resource="http://confOf#Administrative_event"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:SymmetricProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#logoURL">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#writtenBy">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="http://cmt#writeReview"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+    <rdfs:domain rdf:resource="http://cmt#Review"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#title">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#hasVAT">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#siteURL">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#rejectedBy">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="http://cmt#rejectPaper"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Administrator"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#hasFirstName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#maxPapers">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://conference#Program_committee"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#readByMeta-Reviewer">
+    <rdfs:range rdf:resource="http://cmt#Meta-Reviewer"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#paperID">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#hasTitle">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Contribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#adjustedBy">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="http://cmt#adjustBid"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+    <rdfs:domain rdf:resource="http://cmt#Bid"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#starts_on">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Event"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#acceptsHardcopySubmissions">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#hasSurname">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Person"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#maxChoice">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://conference#has_authors">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="http://cmt#writePaper"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Author"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#abstract">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Contribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#addedBy">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="http://cmt#addProgramCommitteeMember"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Administrator"/>
+    <rdfs:domain rdf:resource="http://conference#Program_committee"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#hasDecision">
+    <rdfs:range rdf:resource="http://cmt#Decision"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#has_short_title">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#assignedByReviewer">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="http://cmt#assignExternalReviewer"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Reviewer"/>
+    <rdfs:domain rdf:resource="http://cmt#ExternalReviewer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#ends_on">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="http://confOf#Event"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#defaultChoice">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#positiveInteger"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#earlyRegistration">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="http://confOf#Participant"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#has_title">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://confOf#hasCountry">
+    <rdfs:range rdf:resource="http://confOf#Country"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:about="http://cmt#reviewsPerPaper">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="http://cmt#Conference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://cmt#hasBid">
+    <rdfs:range rdf:resource="http://cmt#Bid"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://cmt#addProgramCommitteeMember">
+    <owl:inverseOf rdf:resource="http://cmt#addedBy"/>
+    <rdfs:range rdf:resource="http://conference#Program_committee"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://cmt#writePaper">
+    <owl:inverseOf rdf:resource="http://conference#has_authors"/>
+    <rdfs:range rdf:resource="http://cmt#Paper"/>
+    <rdfs:domain rdf:resource="http://cmt#Author"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://cmt#assignExternalReviewer">
+    <owl:inverseOf rdf:resource="http://cmt#assignedByReviewer"/>
+    <rdfs:range rdf:resource="http://cmt#ExternalReviewer"/>
+    <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://cmt#acceptedBy">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:about="http://cmt#acceptPaper"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://cmt#Administrator"/>
+    <rdfs:domain rdf:resource="http://cmt#Paper"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://cmt#writeReview">
+    <owl:inverseOf rdf:resource="http://cmt#writtenBy"/>
+    <rdfs:range rdf:resource="http://cmt#Review"/>
+    <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://cmt#adjustBid">
+    <owl:inverseOf rdf:resource="http://cmt#adjustedBy"/>
+    <rdfs:range rdf:resource="http://cmt#Bid"/>
+    <rdfs:domain rdf:resource="http://cmt#Reviewer"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://cmt#acceptPaper">
+    <owl:inverseOf rdf:resource="http://cmt#acceptedBy"/>
+    <rdfs:range rdf:resource="http://cmt#Paper"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="http://cmt#rejectPaper">
+    <owl:inverseOf rdf:resource="http://cmt#rejectedBy"/>
+    <rdfs:range rdf:resource="http://cmt#Paper"/>
+    <rdfs:domain rdf:resource="http://cmt#Administrator"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:InverseFunctionalProperty>
+</rdf:RDF>
